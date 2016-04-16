@@ -1,0 +1,13 @@
+CREATE TABLE objects (
+    id VARCHAR NOT NULL PRIMARY KEY,
+    type VARCHAR NOT NULL,
+    data JSONB NOT NULL,
+    UNIQUE(type, data)
+);
+
+CREATE TABLE relations (
+    path VARCHAR NOT NULL PRIMARY KEY,
+    sort INTEGER NOT NULL,
+    owner VARCHAR NOT NULL REFERENCES objects(id) ON DELETE CASCADE;
+    related VARCHAR NOT NULL REFERENCES objects(id) ON DELETE RESTRICT;
+);

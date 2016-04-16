@@ -1,0 +1,19 @@
+{
+    "name": "jeff/rat",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeff Turcotte",
+            "email": "jeff.turcotte@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rat\\": "src/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.3"
+    }
+}
