@@ -9,26 +9,16 @@ use Rat\Identifier;
 $pdo = new PDO('pgsql:host=localhost;dbname=jeff');
 
 class User extends Entity {
+
 }
 
 $identifier = new Identifier();
 $storage = new Storage($identifier, $pdo);
 $manager = new Manager($storage);
 
-$user = $manager->get('User', '25e134844ccd8d72b941749da9f6fe62');
+// $user = $manager->get('User', '25e134844ccd8d72b941749da9f6fe62');
 
 $test = new User();
 $test->firstName = 'jim';
 $test->lastName = 'bob';
 $manager->save($test);
-
-var_dump($user->export());
-//var_dump($user->lastName);
-
-$user->occupation = 'Director Of Engineering';
-
-$manager->save($user);
-
-
-
-

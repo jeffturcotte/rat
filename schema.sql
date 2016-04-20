@@ -5,9 +5,11 @@ CREATE TABLE objects (
     UNIQUE(type, data)
 );
 
+/*
 CREATE TABLE relations (
     path VARCHAR NOT NULL PRIMARY KEY,
     sort INTEGER NOT NULL,
     owner VARCHAR NOT NULL REFERENCES objects(id) ON DELETE CASCADE;
     related VARCHAR NOT NULL REFERENCES objects(id) ON DELETE RESTRICT;
 );
+*/
